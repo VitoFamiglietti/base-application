@@ -27,5 +27,11 @@
                 "chmod -R 777 cache"
             ]
         }
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^2.2"
+    },
+    "autoload": {
+        "classmap": ["classes/"]
     }
 }

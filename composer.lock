@@ -4,24 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "91f593a28e50cc5342ebb4c8767cd51c",
+    "hash": "ea25094d992dba372847eb04e3d5867a",
+    "content-hash": "67b94f08aa76db32e2723cd67496f548",
     "packages": [
         {
             "name": "caffeina-core/core",
-            "version": "0.9.9",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caffeina-core/core.git",
-                "reference": "c5a2467810da6bac699581eaace77cdfe7e0c962"
+                "reference": "d8c731fdce81522d1810ab1473121e7c36871c04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caffeina-core/core/zipball/c5a2467810da6bac699581eaace77cdfe7e0c962",
-                "reference": "c5a2467810da6bac699581eaace77cdfe7e0c962",
+                "url": "https://api.github.com/repos/caffeina-core/core/zipball/d8c731fdce81522d1810ab1473121e7c36871c04",
+                "reference": "d8c731fdce81522d1810ab1473121e7c36871c04",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4"
+            },
+            "require-dev": {
+                "mybuilder/phpunit-accelerator": ">=1",
+                "phpunit/dbunit": ">=1.2",
+                "phpunit/php-invoker": "*",
+                "phpunit/phpunit": "^5"
             },
             "type": "library",
             "autoload": {
@@ -36,31 +43,35 @@
             "authors": [
                 {
                     "name": "Stefano Azzolini",
-                    "email": "stefano.azzolini@caffeinalab.com"
+                    "email": "stefano.azzolini@caffeina.com"
+                },
+                {
+                    "name": "Gabriele Diener",
+                    "email": "gabriele.diener@caffeina.com"
                 }
             ],
-            "description": "Caffeina - Core PHP SDK",
-            "homepage": "http://caffeina.it",
+            "description": "Platform for rapid application development.",
+            "homepage": "http://caffeina.com",
             "keywords": [
-                "Toolbox",
                 "core",
                 "framework",
+                "platform",
                 "sdk"
             ],
-            "time": "2015-05-19 09:41:56"
+            "time": "2016-04-15 13:56:05"
         },
         {
             "name": "caffeina-core/twig",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caffeina-core/twig.git",
-                "reference": "e9ce860842aad2d32bdfd34a36f4939b586453ea"
+                "reference": "b111c374d30b59916f0d29ef072d895c04a96634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caffeina-core/twig/zipball/e9ce860842aad2d32bdfd34a36f4939b586453ea",
-                "reference": "e9ce860842aad2d32bdfd34a36f4939b586453ea",
+                "url": "https://api.github.com/repos/caffeina-core/twig/zipball/b111c374d30b59916f0d29ef072d895c04a96634",
+                "reference": "b111c374d30b59916f0d29ef072d895c04a96634",
                 "shasum": ""
             },
             "require": {
@@ -91,20 +102,20 @@
                 "twig",
                 "view"
             ],
-            "time": "2015-05-06 11:01:25"
+            "time": "2016-03-31 15:11:10"
         },
         {
             "name": "twig/twig",
-            "version": "v1.22.2",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a"
+                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
-                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
+                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +128,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.22-dev"
+                    "dev-master": "1.24-dev"
                 }
             },
             "autoload": {
@@ -152,10 +163,61 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-22 13:59:32"
+            "time": "2016-01-25 21:22:18"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "63f37b9395e8041cd4313129c08ece896d06ca8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/63f37b9395e8041cd4313129c08ece896d06ca8e",
+                "reference": "63f37b9395e8041cd4313129c08ece896d06ca8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2016-04-15 10:48:49"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
