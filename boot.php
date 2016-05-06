@@ -7,6 +7,12 @@
 define ('APP_DIR', __DIR__);
 require APP_DIR.'/vendor/autoload.php';
 
+try {
+    (new Dotenv\Dotenv(APP_DIR))->load();
+} catch (Dotenv\Exception\InvalidPathException $e) {
+
+}
+
 $_response_send = new Deferred(function() {
     Response::sent() || Response::send();
 });
