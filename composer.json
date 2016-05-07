@@ -14,7 +14,8 @@
     "require": {
       "php": ">=5.4",
       "caffeina-core/core": "*",
-      "caffeina-core/twig": "*"
+      "caffeina-core/twig": "*",
+      "josegonzalez/dotenv": "dev-master"
     },
     "minimum-stability": "stable",
     "extra": {
@@ -27,9 +28,6 @@
                 "chmod -R 777 cache"
             ]
         }
-    },
-    "require-dev": {
-        "vlucas/phpdotenv": "^2.2"
     },
     "autoload": {
         "classmap": ["classes/"]

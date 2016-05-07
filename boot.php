@@ -8,37 +8,31 @@ define ('APP_DIR', __DIR__);
 require APP_DIR.'/vendor/autoload.php';
 
 try {
-    (new Dotenv\Dotenv(APP_DIR))->load();
-} catch (Dotenv\Exception\InvalidPathException $e) {
-
+    (new josegonzalez\Dotenv\Loader(APP_DIR))->parse()->putenv();
+} catch (Exception $e) {
+    //
 }
 
 $_response_send = new Deferred(function() {
     Response::sent() || Response::send();
 });
 
-// Load options
-Options::loadPHP(APP_DIR.'/config.php');
-
-// Temp directory
-define ('TEMP_DIR', Options::get('cache.directory', sys_get_temp_dir()));
-
 // Caching strategy
 Cache::using([
   'files' => [
-    'cache_dir' => TEMP_DIR
+    'cache_dir' => getenv('CACHE_DIR') || sys_get_temp_dir()
   ],
 ]);
 
 // Init Views
 View::using(new View\Twig(APP_DIR.'/templates',[
-    'cache'         => Options::get('cache.views',true) ? TEMP_DIR : false,
-    'auto_reload'   => Options::get('debug',false),
+    'cache'         => getenv('CACHE_VIEWS') ? getenv('CACHE_DIR') : false,
+    'auto_reload'   => getenv('DEBUG'),
 ]));
 
 View::addGlobals([
   'BASE_URL'  => rtrim(dirname($_SERVER['PHP_SELF']),'/').'/',
-  'CACHEBUST' => Options::get('debug',false) ? '?v='.time() : '',
+  'CACHEBUST' => getenv('DEBUG') ? '?v='.time() : '',
 ]);
 
 // Routes
